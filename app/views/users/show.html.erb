@@ -1,0 +1,53 @@
+<br>
+<div class="search-results">
+      <div class="row ">
+        <div class="large-2 columns">
+          <a href="#"> <span> </span><img src="http://placehold.it/150x200&text=book cover" alt="book cover" class=" thumbnail"></a>
+        </div>
+        <div class="large-10 columns">
+          <div class="row">
+            <div class=" large-9 columns">
+              <h5>  <%=@user.name%> </h5>
+              <p> <%= @lunch.date.strftime("%A, %m/%d ") %> | <%= @lunch.time.strftime("Meet at the door at %l:%M%p")%></p>
+            </div>
+            <div class="row">
+              <div class=" large-12 columns">
+                <ul class="large-block-grid-2">
+                  <li>
+                    <ul>
+                      <li><strong>Favorite Color: </strong><%= @lunch.category %></li>
+                      <li><strong>Cat or Dog Person:</strong> <%= @lunch.description %> </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <ul>
+                      <li><strong>Price:</strong> <%= @lunch.price %>  </li>
+                    </ul>
+                  </li>
+                </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<%= @user.events.each do |event| %>
+<div class="small-12 medium-6 columns">
+        <div class="callout-card warning radius">
+          <div class="card-label">
+            <div class="label-text">
+              <%= event.time.strr####### %>
+            </div>
+          </div>
+          <div class="callout-card-content">
+            <h3 class="lead"> <%= link_to ************  event.name %> </h3>
+            <ul>
+              <li> <%= event.price %> </li>
+              <li> <%= event.category %> </li>
+              <li> <%= event.description %> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>

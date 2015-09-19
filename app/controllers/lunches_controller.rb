@@ -7,6 +7,7 @@ class LunchesController < ApplicationController
   def new
     @lunch = Lunch.new
     @categories = Lunch::CATEGORIES
+    @prices = Lunch::PRICES
   end
 
   def create
