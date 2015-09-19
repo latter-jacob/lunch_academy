@@ -3,10 +3,12 @@
  <%= f.label :name_of_group %>
  <%= f.text_field :name %>
  <br>
- <div class="date"
- <%= f.label :meet_at_door_time %>
- <%= f.datetime_select :date_time, :a => true, :minute_step => 15 %>
-</div>
+
+  <%= label_tag(:date, "Date:") %>
+  <%= date_field_tag(:date) %>
+ <br>
+  <%= label_tag(:date, "Time to meet at door:") %>
+  <%= time_field_tag(:time) %>
  <br>
  <%= f.label :price_range %>
  <%= f.text_field :price %>
@@ -17,7 +19,7 @@
  <%= f.text_field :location %>
  <br>
  <%= f.label :category %>
- <%= f.text_field :category %>
+     <%= f.select :category, @categories%>
  <br>
  <%= f.label :description %>
  <%= f.text_field :description %>
