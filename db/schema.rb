@@ -19,16 +19,15 @@ ActiveRecord::Schema.define(version: 20150919153644) do
   create_table "groups", force: :cascade do |t|
     t.integer "user_id",  null: false
     t.integer "lunch_id", null: false
-    t.string  "name",     null: false
   end
 
   create_table "lunches", force: :cascade do |t|
     t.string   "location"
     t.string   "category"
-    t.string   "price",        null: false
-    t.datetime "date",         null: false
-    t.datetime "meeting_time", null: false
+    t.string   "price",       null: false
+    t.datetime "date_time",   null: false
     t.string   "description"
+    t.string   "name",        null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

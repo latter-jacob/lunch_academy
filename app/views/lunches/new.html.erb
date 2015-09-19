@@ -1,0 +1,26 @@
+<h1>Add a Lunch </h1>
+<%= form_for @lunch do |f| %>
+ <%= f.label :name_of_group %>
+ <%= f.text_field :name %>
+ <br>
+ <div class="date"
+ <%= f.label :meet_at_door_time %>
+ <%= f.datetime_select :date_time, :a => true, :minute_step => 15 %>
+</div>
+ <br>
+ <%= f.label :price_range %>
+ <%= f.text_field :price %>
+ <br>
+  Optional Fields
+ <br><br>
+ <%= f.label :location %>
+ <%= f.text_field :location %>
+ <br>
+ <%= f.label :category %>
+ <%= f.text_field :category %>
+ <br>
+ <%= f.label :description %>
+ <%= f.text_field :description %>
+
+ <%= f.submit "Add Lunch Group" %>
+<% end %>

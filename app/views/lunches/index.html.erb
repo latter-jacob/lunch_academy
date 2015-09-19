@@ -1,0 +1,11 @@
+<h2>List of Lunches</h2>
+
+<ul>
+ <% @lunches.each do |lunch| %>
+   <li>
+   <%= link_to lunch.name, lunch_path(lunch) %>
+   </li>
+ <% end %>
+</ul>
+
+<%= link_to "Add a new Lunch", new_lunch_path %>
