@@ -38,6 +38,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.3.8)
     arel (6.0.3)
+    bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
@@ -57,7 +58,18 @@ GEM
       execjs
     coffee-script-source (1.9.1.1)
     debug_inspector (0.0.2)
+    devise (3.5.2)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      responders
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     diff-lcs (1.2.5)
+    dotenv (2.0.2)
+    dotenv-rails (2.0.2)
+      dotenv (= 2.0.2)
+      railties (~> 4.0)
     erubis (2.7.0)
     execjs (2.6.0)
     factory_girl (4.5.0)
@@ -116,6 +128,7 @@ GEM
     omniauth-oauth2 (1.3.1)
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
+    orm_adapter (0.5.0)
     pg (0.18.3)
     pry (0.10.1)
       coderay (~> 1.1.0)
@@ -158,6 +171,8 @@ GEM
     rake (10.4.2)
     rdoc (4.2.0)
       json (~> 1.4)
+    responders (2.1.0)
+      railties (>= 4.2.0, < 5)
     rspec (3.3.0)
       rspec-core (~> 3.3.0)
       rspec-expectations (~> 3.3.0)
@@ -192,9 +207,6 @@ GEM
       rdoc (~> 4.0)
     shoulda-matchers (2.8.0)
       activesupport (>= 3.0.0)
-    simple_form (3.1.1)
-      actionpack (~> 4.0)
-      activemodel (~> 4.0)
     slop (3.6.0)
     sprockets (3.3.4)
       rack (~> 1.0)
@@ -211,6 +223,8 @@ GEM
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     valid_attribute (2.0.0)
+    warden (1.2.3)
+      rack (>= 1.0)
     web-console (2.2.1)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
@@ -226,6 +240,8 @@ DEPENDENCIES
   byebug
   capybara
   coffee-rails (~> 4.1.0)
+  devise
+  dotenv-rails
   factory_girl_rails
   foundation-rails
   fuubar
@@ -241,7 +257,6 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   shoulda-matchers
-  simple_form
   uglifier (>= 1.3.0)
   valid_attribute
   web-console (~> 2.0)
