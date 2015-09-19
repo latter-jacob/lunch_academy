@@ -1,9 +1,8 @@
 
 <h2><%= @lunch.name %></h2>
 <h3><%= @lunch.category %></h3>
-
-
+<h3><%= @lunch.date.strftime("For lunch on %m/%d ") %></h3>
+<h3><%= @lunch.time.strftime("Meet at the door at %I:%M%p")%></h3>
 <p><%= @lunch.description %></p>
 
 <%= link_to "List of Lunches", root_path %>
-<%= render 'users/index' %>

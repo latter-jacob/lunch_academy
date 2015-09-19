@@ -25,7 +25,8 @@ ActiveRecord::Schema.define(version: 20150919153644) do
     t.string   "location"
     t.string   "category"
     t.string   "price",       null: false
-    t.datetime "date_time",   null: false
+    t.date     "date",        null: false
+    t.datetime "time",        null: false
     t.string   "description"
     t.string   "name",        null: false
     t.datetime "created_at"
