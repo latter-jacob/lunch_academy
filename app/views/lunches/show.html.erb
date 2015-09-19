@@ -2,7 +2,7 @@
 <div class="search-results">
       <div class="row ">
         <div class="large-2 columns">
-          <a href="#"> <span> </span><img src="http://placehold.it/150x200&text=book cover" alt="book cover" class=" thumbnail"></a>
+          <a href="#"> <span> </span><img src="<%=@user.image%>" alt="book cover" class=" thumbnail"></a>
         </div>
         <div class="large-10 columns">
           <div class="row">
@@ -11,7 +11,7 @@
               <p><%= @lunch.date.strftime("%A, %m/%d ") %> | <%= @lunch.time.strftime("Meet at the door at %l:%M%p")%></p>
             </div>
             <div class=" large-3 columns">
-              <a href="#"  class="button  expand medium"><span>Join</span> </a>
+              <%= link_to 'Join', lunch_groups_path(@lunch), method: :post, class: "button alert" %>
             </div>
             <div class="row">
               <div class=" large-12 columns">
@@ -38,36 +38,4 @@
 <br>
 <br>
 
-
-
 <%= link_to "List of Lunches", lunches_path %>
-<div class="row">
-    <div class="medium-4 columns">
-     <!-- <%# @lunch.users.each do |user| %> -->
-      <div class="profile-card">
-        <img src="http://zurb.com/ink/images/inky-computer.svg" alt="Inky">
-        <div class="profile-info">
-          <h4 class="subheader">Inky</h4>
-          <p>Inky or inking can substitute for any word having to do with cool or awesome.</p>
-          <p><strong>Used in a scentence -</strong> Yo man, Foundation for Emails is so inky. Coding emails doesn't suck anymore!</p>
-          <p><a href="http://foundation.zurb.com/forum">Forum</a> | <a href="http://zurb.com/ink/">Website</a></p>
-          <hr>
-        </div>
-        <!-- <%#end %> -->
-   </div>
-</div>
-<div class="row">
-    <div class="medium-4 columns">
-     <!-- <%# @lunch.users.each do |user| %> -->
-      <div class="profile-card">
-        <img src="http://zurb.com/ink/images/inky-computer.svg" alt="Inky">
-        <div class="profile-info">
-          <h4 class="subheader">Inky</h4>
-          <p>Inky or inking can substitute for any word having to do with cool or awesome.</p>
-          <p><strong>Used in a scentence -</strong> Yo man, Foundation for Emails is so inky. Coding emails doesn't suck anymore!</p>
-          <p><a href="http://foundation.zurb.com/forum">Forum</a> | <a href="http://zurb.com/ink/">Website</a></p>
-          <hr>
-        </div>
-        <!-- <%#end %> -->
-   </div>
-</div>

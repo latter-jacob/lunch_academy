@@ -1,7 +1,7 @@
 class LunchesController < ApplicationController
 
   def index
-     @lunches = Lunch.where("date > current_timestamp - (20 * interval '1 minute')").order(:time, :date)
+     @lunches = Lunch.where("date > current_timestamp - (20 * interval '1 minute')").order(:date, :time)
   end
 
   def new
@@ -24,6 +24,7 @@ class LunchesController < ApplicationController
 	end
 
   def show
+    @user = current_user
     @lunch = Lunch.find(params[:id].to_i)
   end
 

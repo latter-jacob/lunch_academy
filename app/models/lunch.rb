@@ -6,7 +6,7 @@ validates_presence_of :name, :price, :date, :time
   validates :category, inclusion: { in: CATEGORIES, allow_blank: true }
 
   PRICES = %w[$ $$ $$$ $$$$ $$$$$]
-  validates :prices, inclusion: { in: PRICES }
+  validates :price, inclusion: { in: PRICES }
 
   has_many :groups
   has_many :users,
