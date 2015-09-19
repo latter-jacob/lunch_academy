@@ -1,7 +1,11 @@
 class LunchesController < ApplicationController
 
   def index
+<<<<<<< HEAD
     @lunches = Lunch.all
+=======
+    @lunch = Lunch.where("date_time > current_timestamp - (20 * interval '1 minute')").order(:date_time)
+>>>>>>> a0f168da78099d8c9680f82a00f8e93875ecb1ca
   end
 
   def new
