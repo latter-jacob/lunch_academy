@@ -4,6 +4,9 @@ Rails.application.routes.draw do
     root to: "devise/sessions#new"
     delete 'sign_out', to: 'devise/sessions#destroy', as: :destroy_user_session
   end
-  resources :lunches
+  resources :lunches do
+    resources :groups
+  end
+  # resources :groups
 
 end
