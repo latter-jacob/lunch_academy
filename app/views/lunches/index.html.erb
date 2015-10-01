@@ -1,0 +1,26 @@
+<h2>List of Lunches</h2>
+<div class="row">
+ <% @lunches.each do |lunch| %>
+  <div class="small-9 columns small-centered">
+    <article class="event">
+
+        <div class="event-date">
+        <p class="event-month"><%=lunch.date.strftime("%b")%></p>
+        <p class="event-day"><%=lunch.date.strftime("%d")%></p>
+        </div>
+
+        <div class="event-desc">
+          <h4 class="event-desc-header"> <%=lunch.name%></h4>
+          <p class="event-desc-detail"><span class="event-desc-time"></span><%=lunch.category%> - <%=lunch.time.strftime("%l:%M%p")%> </p>
+          <%= link_to "Details", lunch_path(lunch), class:"success button" %>
+        </div>
+
+      </article>
+     <hr>
+  </div>
+</div>
+ <% end %>
+ <br>
+ <br>
+ <br>
+ <%= link_to "Add a new Lunch", new_lunch_path, class:"success button"%>

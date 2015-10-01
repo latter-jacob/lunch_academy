@@ -1,0 +1,41 @@
+<br>
+<div class="search-results">
+      <div class="row ">
+        <div class="large-2 columns">
+          <a href="#"> <span> </span><img src="<%=@user.image%>" alt="book cover" class=" thumbnail"></a>
+        </div>
+        <div class="large-10 columns">
+          <div class="row">
+            <div class=" large-9 columns">
+              <h5><a href="#">  <%=@lunch.name%>  </a></h5>
+              <p><%= @lunch.date.strftime("%A, %m/%d ") %> | <%= @lunch.time.strftime("Meet at the door at %l:%M%p")%></p>
+            </div>
+            <div class=" large-3 columns">
+              <%= link_to 'Join', lunch_groups_path(@lunch), method: :post, class: "button alert" %>
+            </div>
+            <div class="row">
+              <div class=" large-12 columns">
+                <ul class="large-block-grid-2">
+                  <li>
+                    <ul>
+                      <li><strong>Category: </strong><%= @lunch.category %></li>
+                      <li><strong>Description:</strong> <%= @lunch.description %> </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <ul>
+                      <li><strong>Price:</strong> <%= @lunch.price %>  </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<br>
+<br>
+<br>
+
+<%= link_to "List of Lunches", lunches_path %>
